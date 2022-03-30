@@ -1,6 +1,6 @@
 import bodyParser from 'body-parser';
 import express, { NextFunction, Request, Response } from 'express';
-import { getUnifiedDictionaryEntrySimplified } from './controllers/unifiedDictionary';
+import { getUnifiedDictionaryEntryMerged, getUnifiedDictionaryEntrySimplified } from './controllers/unifiedDictionary';
 
 const app = express();
 const port = 3000; // TODO: dev config
@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 // TODO: endpoint in config
 app.get(`${baseAPIV1Path}/unifiedDictionaryEntrySimplified`, getUnifiedDictionaryEntrySimplified);
 
-app.get(`${baseAPIV1Path}/unifiedDictionaryEntrySimplified`, getUnifiedDictionaryEntrySimplified);
+app.get(`${baseAPIV1Path}/unifiedDictionaryEntryMerged`, getUnifiedDictionaryEntryMerged);
 
 app.listen(port, () => {
   console.log(`Running on port ${port}.`);

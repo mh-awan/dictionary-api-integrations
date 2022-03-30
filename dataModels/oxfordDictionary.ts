@@ -4,9 +4,9 @@ export interface IOxfordDictionaryResponse {
   error?: Error;
 }
 
-interface IOxfordDictionaryData {
+export interface IOxfordDictionaryData {
   id: string;
-  metadata: IOxfordDictionaryMetaData;
+  metadata: IOxfordDictionaryMetadata;
   results: IOxfordDictionaryResult[];
   word: string;
 }
@@ -19,7 +19,7 @@ interface IOxfordDictionaryResult {
   word: string;
 }
 
-interface IOxfordDictionaryLexicalEntry {
+export interface IOxfordDictionaryLexicalEntry {
   entries: IOxfordDictionaryEntry[];
   language: OxfordDictionaryLanguageEnum | string;
   text: string;
@@ -31,7 +31,7 @@ interface IOxfordDictionaryEntry {
   pronunciations: IOxfordDictionaryPronunciation[];
 }
 
-interface IOxfordDictionaryPronunciation {
+export interface IOxfordDictionaryPronunciation {
   audioFile: string;
   dialects: OxfordDictionaryDialectEnum[] | string[];
   phoneticNotation: OxfordDictionaryPhoneticNotationEnum | string;
@@ -43,7 +43,7 @@ interface IOxfordDictionaryLexicalCategory {
   text: string;
 }
 
-interface IOxfordDictionaryMetaData {
+export interface IOxfordDictionaryMetadata {
   operation: OxfordDictionaryOperationEnum | string;
   provider: OxfordDictionaryProviderEnum | string;
   schema: OxfordDictionarySchemaEnum | string;
@@ -61,4 +61,4 @@ enum OxfordDictionaryPhoneticSpellingEnum { }
 
 enum OxfordDictionaryDialectEnum { }
 
-enum OxfordDictionaryLanguageEnum { }
+export enum OxfordDictionaryLanguageEnum { }

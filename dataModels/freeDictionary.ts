@@ -4,7 +4,7 @@ export interface IFreeDictionaryResponse {
   error?: Error;
 }
 
-interface IFreeDictionaryData {
+export interface IFreeDictionaryData {
   word: string,
   phonetic?: string,
   phonetics: IFreeDictionaryPhonetic[],
@@ -13,14 +13,14 @@ interface IFreeDictionaryData {
   sourceUrls: string[]
 }
 
-interface IFreeDictionaryPhonetic {
+export interface IFreeDictionaryPhonetic {
   text: string,
   audio: string,
   sourceUrl?: string,
   license?: IFreeDictionaryLicense
 }
 
-interface IFreeDictionaryMeaning {
+export interface IFreeDictionaryMeaning {
   partOfSpeech: string,
   definitions: IFreeDictionaryDefinition[],
   synonyms: string[],
@@ -34,7 +34,7 @@ interface IFreeDictionaryDefinition {
   example?: string
 }
 
-interface IFreeDictionaryLicense {
+export interface IFreeDictionaryLicense {
   name: string,
   url: string,
 }

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { IOxfordDictionaryResponse } from "../../dataModels/oxfordDictionary";
 
-// TODO: Add to evn vars
+// TODO: Add to env vars
 const app_id = "988f1808";
 const app_key = "45be7b77608e3acd0074643209870275";
 const fields = "pronunciations";
