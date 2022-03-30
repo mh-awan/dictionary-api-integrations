@@ -1,6 +1,7 @@
 import axios from "axios";
+import { IFreeDictionaryResponse } from "../../dataModels/freeDictionary";
 
-export const getEntryByWord = async (word: string): Promise<any> => {
+export const getfreeDictionaryEntryByWord = async (word: any): Promise<IFreeDictionaryResponse | Error> => {
   try {
     const response = await axios.get(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`,
